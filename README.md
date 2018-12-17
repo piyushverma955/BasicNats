@@ -9,4 +9,8 @@ How to Start:
   3) run node app.js
   
  
-Note: you must install mongo and nats in your system
+commands to use docker images of nats and mongo:
+
+docker run --name mongo -v /home/ubuntu/mongo/db:/data/db -d -p 27017:27017 mongo:latest
+
+docker run -p 4222:4222 -p 8222:8222 -p 6222:6222 --name gnatsd -ti nats:latest
